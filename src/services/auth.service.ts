@@ -12,6 +12,15 @@ export const findUserByUsername = async (username: string) => {
     return await User.findOne({ username });
 };
 
+export const findUserByUsernameOrEmail = async (username: string, email: string) => {
+    return await User.findOne({
+        $or: [
+            { username: username },
+            { email: email }
+        ]
+    });
+};
+
 export const validatePassword = async (inputPassword: string, storedPassword: string) => {
     return await bcrypt.compare(inputPassword, storedPassword);
 };

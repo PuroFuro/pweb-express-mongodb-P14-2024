@@ -6,6 +6,16 @@ export const AuthController = {
 
         try {
             const { username, email, password } = req.body;
+
+            const existingUser = await authService.findUserByUsernameOrEmail(username, email);
+            if (existingUser) {
+                return res.status(400).json({
+                    status: "failed",
+                    message: "Username or email already registered",
+                    data: {}
+                });
+            }
+            
             await authService.registerUser (username, email, password);
             res.json({
                 status: "success",

@@ -1,14 +1,14 @@
 {
   "name": "pweb-express-mongodb-2-2024",
   "version": "1.0.0",
-  "description": "Praktikum Pemweb Modul3 P12 2024",
+  "description": "Praktikum Pemweb Modul3 P14 2024",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc --build",
     "start": "node ./dist/index.js",
     "start:dev": "nodemon ./src/index.ts"
   },
-  "author": "P10",
+  "author": "P14",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

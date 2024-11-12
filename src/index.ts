@@ -23,7 +23,7 @@ app.use('/mechanism', mechanismRoutes);
 app.get('/', (req, res) => {
     res.json({
         status: "success",
-        message: "API is running",
+        message: "Api is running away",
         data: { date: new Date() }
     });
 });
